@@ -34,12 +34,12 @@ function validate(dtoIn) {
   } else if (dtoIn[count] <= 0 && dtoIn[count] > 1000) {
     // pokud cislo neni mezi 1-1000
     throw "count není v platném rozmezí (1-1000)";
-  } else if (dtoIn[count] == undefined || null) {
+  } else if (dtoIn[(age, min)] == undefined || null) {
     throw "Minimální nemá přiřazenou hodnotu";
   } else if (dtoIn[(age, min)] < 18) {
     // pokud je min vek mensi nez 18
     throw "Minimální věk není platný (menší než 18)";
-  } else if (dtoIn[count] == undefined || null) {
+  } else if (dtoIn[(age, max)] == undefined || null) {
     throw "Maximální nemá přiřazenou hodnotu";
   } else if (dtoIn[(age, max)] > 70) {
     // pokud je max vek vetsi nez 70
