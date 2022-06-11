@@ -29,25 +29,24 @@ function getRandom(min, max) {
    * @return {bool} true, false
   **/
 function validate(dtoIn) {
-  if (isNan(dtoIn[count])) {
-    // pokud se nejedna o cislo
-    throw "count není číslo";
+  if (dtoIn[count] == undefined || null) {
+    throw "count nemá přiřazenou hodnotu";
   } else if (dtoIn[count] <= 0 && dtoIn[count] > 1000) {
     // pokud cislo neni mezi 1-1000
     throw "count není v platném rozmezí (1-1000)";
-  } else if (isNan(dtoIn[(age, min)])) {
-    // pokud se nejedna o cislo
-    throw "Minimální věk není číslo";
+  } else if (dtoIn[count] == undefined || null) {
+    throw "Minimální nemá přiřazenou hodnotu";
   } else if (dtoIn[(age, min)] < 18) {
     // pokud je min vek mensi nez 18
     throw "Minimální věk není platný (menší než 18)";
-  } else if (isNan(dtoIn[(age, max)])) {
-    // pokud se nejedna o cislo
-    throw "Maximální věk není číslo";
+  } else if (dtoIn[count] == undefined || null) {
+    throw "Maximální nemá přiřazenou hodnotu";
   } else if (dtoIn[(age, max)] > 70) {
     // pokud je max vek vetsi nez 70
     throw "Maximální věk není platný (více než 70let)";
   }
+
+  return true;
 }
 /**
  * vrati workload, hodnoty 10, 20, 30 nebo 40
